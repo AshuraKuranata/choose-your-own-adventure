@@ -1,20 +1,25 @@
 const prompt = require('prompt-sync')();
 const username = prompt('What is your name? ');
-console.log(`Your name is ${username}`);
-
-console.log(`Welcome ${username}.  You are the captain of an investigation squad sent to Kor-poron to investigate for the previously sent exploration team.
-    The exploration team has not responded back for the last four cycles and command is sending your squad to find the team.`);
+console.log(" ")
+console.log(`Welcome ${username}.  You are the captain of an investigation squad sent to Kor-poron to investigate the disappearance of the previously sent exploration team.
+The exploration team has not responded back for the last four cycles and command is sending your squad to find them.`);
+console.log(" ")
 console.log("During this adventure, you will be prompted to make choices.  When directed, input text within the [] for accurate results.")
-
-const equipmentOne = prompt("Select your team's equipment (type text in []): [las gun] [hover bikes] [translator] [scanner] [rations] ");
-const equipmentTwo = prompt(`${equipmentOne} selected. `);
+console.log(" ")
+console.log("As you prepare your selection, High Command recommends that you bring at least one piece of navigation equipment.")
+console.log(" ")
+const equipmentOne = prompt("Select your team's equipment (type text in []): [las gun] [hover bikes] [translator] [scanner] [rations] : ");
+const equipmentTwo = prompt(`${equipmentOne} selected. Please select a second item: `);
 console.log(`${equipmentTwo} selected.`);
-
-console.log("You touch-down at the drop-zone. You're immediately hit by the blast of warm, humid air from the atmospheric difference between the shuttle and planet. Upon exiting the shuttle, you see the ruins of the exploration team's site.");
+console.log(" ")
+console.log("You touch-down at the drop-zone. You're immediately hit by the blast of warm, humid air from the atmospheric difference between the shuttle and planet.");;
+console.log("Upon exiting the shuttle, you see the ruins of the exploration team's site.");
 
 if (equipmentOne === 'scanner' || equipmentTwo === 'scanner') {
     console.log("Your scanner picks up on life-forms in the ruins.");
+    console.log(" ")
     const encounterAliens = prompt('Do you wish to approach the life-forms? [y] [n] ');
+    console.log(" ")
     if (encounterAliens == 'y') {
         console.log("You follow the signals to the life forms and see the aliens surrounding the exploration team. ");
         if (equipmentOne === 'las gun' || equipmentTwo === 'las gun') {
@@ -76,6 +81,7 @@ if (equipmentOne === 'scanner' || equipmentTwo === 'scanner') {
                 const alienHelp = prompt('Do you wish to follow their instructions? [y] [n]: ')
                 if (alienHelp == 'y') {
                     console.log("'Great! My people will distract the Ooo-to-krus away.  When we do so, make sure you first make a loud noise to scare the It-ti-chuks away first before you try to open the cocoons!'");
+                    console.log(" ")
                     console.log("You see the furry being quickly climb away, and shortly after, a grunting and flurry of movement is seen in the treeline, where you catch glimpses of the aliens at odds with one another, and in a short while, the clearing seems clear.")
                     const followIns = prompt('Do you make noise first, or try to open the cocoons while the coast is clear? [n] to make noise, [o] to open the cocoons: ')
                     if (followIns == 'n') {
@@ -107,6 +113,7 @@ if (equipmentOne === 'scanner' || equipmentTwo === 'scanner') {
                 if (baitTrap == 'b') {
                     console.log("Your team loads up one of the hover bikes and goes through the clearing.  Immediately, the aliens spring up and chase the bike away.  While gone, your team approaches the cocoons and successfully get the people out.");
                     console.log("Your team successfully exits the forest with the exploration team, but the team member was never seen again.");
+                    console.log(" ")
                     console.log("Congratulations! Try to succeed without losing a team member!");
                     process.exit();
                 } else {
