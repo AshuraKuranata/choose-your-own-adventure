@@ -8,9 +8,53 @@ console.log("During this adventure, you will be prompted to make choices.  When 
 console.log(" ")
 console.log("As you prepare your selection, High Command recommends that you bring at least one piece of navigation equipment.")
 console.log(" ")
-const equipmentOne = prompt("Select your team's equipment (type text in []): [las gun] [hover bikes] [translator] [scanner] [rations] : ");
-const equipmentTwo = prompt(`${equipmentOne} selected. Please select a second item: `);
-console.log(`${equipmentTwo} selected.`);
+
+function equipSelectOne(playerEquipOne) {
+    while (playerEquipOne !== 'las gun' || playerEquipOne !== 'hover bikes' || playerEquipOne !== 'translator' || playerEquipOne !== 'scanner' || playerEquipOne !== 'rations'){
+        const playerEquipOne = prompt("Select your team's equipment (type text in []): [las gun] [hover bikes] [translator] [scanner] [rations] : ")
+        switch(playerEquipOne){
+            case 'las gun':
+                return playerEquipOne;
+            case 'hover bikes':
+                return playerEquipOne;
+            case 'translator':
+                return playerEquipOne;
+            case 'scanner':
+                return playerEquipOne;
+            case 'rations':
+                return playerEquipOne;
+            default: console.log(`${playerEquipOne} is invalid. Please select valid equipment: `);
+        }
+    } 
+}
+
+function equipSelectTwo(playerEquipTwo) {
+    while (playerEquipTwo !== (('las gun') || ('hover bikes') || ('translator') || ('scanner') || ('rations'))){
+        const playerEquipTwo = prompt("Select your team's equipment (type text in []): [las gun] [hover bikes] [translator] [scanner] [rations] : ")
+        switch(playerEquipTwo){
+            case 'las gun':
+                return playerEquipTwo;
+            case 'hover bikes':
+                return playerEquipTwo;
+            case 'translator':
+                return playerEquipTwo;
+            case 'scanner':
+                return playerEquipTwo;
+            case 'rations':
+                return playerEquipTwo;
+            default: console.log(`${playerEquipTwo} is invalid. Please select valid equipment: `);
+        }
+    } 
+} 
+const equipmentOne = equipSelectOne();
+console.log(" ")
+console.log(`${equipmentOne} selected. Please select a second item: `);
+
+console.log(" ")
+
+const equipmentTwo = equipSelectTwo();
+
+console.log(`${equipmentTwo} selected. Your equipment for this session are: ${equipmentOne} and ${equipmentTwo}.`);
 console.log(" ")
 console.log("You touch-down at the drop-zone. You're immediately hit by the blast of warm, humid air from the atmospheric difference between the shuttle and planet.");;
 console.log("Upon exiting the shuttle, you see the ruins of the exploration team's site.");
